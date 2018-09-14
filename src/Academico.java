@@ -14,11 +14,11 @@ public class Academico {
 		System.out.print("\rInforme a Matrícula: ");
 		a.matricula = ematricula.next();
 		
-		System.out.print("Informe o nome: ");
+		System.out.print("\rInforme o nome: ");
 		a.nome = enome.nextLine();
 		alunos.add(a);
 		
-		System.out.println("Aluno Cadastrado");
+		System.out.println("\nAluno Cadastrado!!");
 		
 	}
 	
@@ -39,7 +39,7 @@ public class Academico {
 		
 		i--;
 		alunos.remove(i);
-		System.out.println(" Aluno Removido ");
+		System.out.println("\n Aluno Removido!! ");
 		
 	}
 	
@@ -60,7 +60,7 @@ public class Academico {
 		System.out.println(a.getNome() + ", modifica para :");
 		a.nome = enome.nextLine();
 		
-		System.out.print("O Aluno Foi Alterado com Sucesso");
+		System.out.print("\nO Aluno Foi Alterado com Sucesso");
 		
 	}
 }
