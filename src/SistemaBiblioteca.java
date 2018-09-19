@@ -9,8 +9,9 @@ public class SistemaBiblioteca {
 	
 		
 		while(true){
-			System.out.println("\nSistema de Biblioteca Escolar");
-			System.out.print("\n(1)-Cadastrar \n(2)-Listar\n(3)-Emprestar\n(4)-Sair");
+			System.out.println("*************************************\n");
+			System.out.println("Sistema de Biblioteca Escolar");
+			System.out.print("\n(1)-Cadastrar Aluno \n(2)-Listar Aluno\n(3)-Cadastrar Livro\n(4)-Listar Livro\n(5)-Emprestar Livros\n(6)-Listar Empréstimos\n(7)-Devolver Livro\n");
 			System.out.print("\nEscolha uma opção:");
 		
 		int op=h.nextInt();
@@ -19,81 +20,42 @@ public class SistemaBiblioteca {
 			 break;
 		
 		switch(op){
+					
 		case 1:
-				
-			System.out.println("*******************");
-			
-			if(op==3)
-				break;
-			
-			switch(op) {
-			case 1:
 				b.cadastrarAluno();
 				break;
-			case 2:
-				b.cadastrarLivro();
-				break;
-			default:
-				System.out.println("Opção inválida");
-				break;
-			}
-		
-			break;
-			
-		
 		case 2:
-			
-			System.out.println("*******************");
-			
-			 if(op==3)				 
-			 	break;
-			
-			 switch(op) {
-				case 1:
-					b.listarAlunos();
-					break;
-				case 2:
-					b.listarLivros();
-					break;
-				case 3:
-					b.listarEmprestimos();
-					break;
-				default:
-					System.out.println("Opção Inválida");
-					break;
-			  }
-				
+				b.listarAlunos();
 				break;
 			
+							
 		case 3:
-			
-			System.out.println("*******************");
-					
-			if(op==3)
-				break;
-			
-			switch(op){
-			case 1:
+				b.cadastrarLivro();
+					break;
+		case 4:
+				b.listarLivros();
+					break;
+							
+		case 5:
 				b.emprestarLivro();
 				break;
-			case 2:
+		case 6:
 				b.listarEmprestimos();
 				break;
-			case 3:
+		case 7:
 				b.devolverLivro();
 				break;
+				
 			default:
 				System.out.println("Opção Inválida");
 				break;
 			}
-				 
-			break;
-						 			 
-			 
-			}
-			
+					 
 		}
-		 
 	}
+		 
 }
+	
+
+
 

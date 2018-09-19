@@ -10,7 +10,7 @@ public class Livro {
 		return titulo;
 	}
 	
-	public void setTitulo(String titulo) { //altera
+	public void setTitulo(String titulo) { //alterar
 		this.titulo = titulo;
 	}
 	public String getAutor() {				//retorna

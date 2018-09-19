@@ -31,6 +31,6 @@ public class Aluno {
 
 	@Override
 	public String toString() {
-		return "Aluno * nome= " + nome + ", matrícula= " + matricula + "*";
+		return "Aluno -> nome= " + nome + ", matrícula= " + matricula + "*";
 	}
 }

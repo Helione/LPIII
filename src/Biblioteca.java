@@ -18,7 +18,7 @@ public class Biblioteca {
 		a.setNome(n.nextLine());
 		alunos.add(a);
 		
-		System.out.println("Aluno Cadastrado");
+		System.out.println("Aluno Cadastrado!");
 	}
 	
 	public void cadastrarLivro() {
@@ -41,7 +41,7 @@ public class Biblioteca {
 		l.setEditora(e.next());
 		
 		livros.add(l);
-		System.out.println("Livro Cadastrado");
+		System.out.println("Livro Cadastrado!");
 		
 	}
 	
@@ -58,15 +58,15 @@ public class Biblioteca {
 	}
 	
 	public void emprestarLivro() {
-		System.out.println("\nExibindo.....\n\n");
+		System.out.println("\n");
 		listarAlunos();
-		System.out.println("*******************");
+		System.out.println("\n");
 		listarLivros();
 		
 		
-		System.out.println("******************");
+		System.out.println("*************************************");
 		System.out.println("**Empréstimo de Livros para Alunos**");
-		System.out.println("Informe o id do aluno e depois o id do livro para realizar o emprestimo.\n");
+		System.out.println("Informe o id do aluno e do livro para realizar o emprestimo.\n");
 		
 		Emprestimo emp = new Emprestimo();
 		Scanner e = new Scanner(System.in);
@@ -96,7 +96,7 @@ public class Biblioteca {
 	}
 	
 	public void devolverLivro() {
-		System.out.print("\nExibindo...\n");
+		System.out.print("\n\n");
 		listarEmprestimos();
 		
 		System.out.println("************************");
