@@ -1,92 +1,47 @@
 
 public class Emprestimo {
+	public final static int Emprestado=1;
+	public final static int Devolvido=2;
    	
 	Aluno aluno;
-	Livro livro;
+	ItemAcervo itemAcervo;
 	String dataEmprestimo;
 	String dataDevolucao;
 	int status;
-	
-	
-
-	
 	public Aluno getAluno() {
 		return aluno;
 	}
-
-
-
-
 	public void setAluno(Aluno aluno) {
 		this.aluno = aluno;
 	}
-
-
-
-
-	public Livro getLivro() {
-		return livro;
+	public ItemAcervo getItemAcervo() {
+		return itemAcervo;
 	}
-
-
-
-
-	public void setLivro(Livro livro) {
-		this.livro = livro;
+	public void setItemAcervo(ItemAcervo itemAcervo) {
+		this.itemAcervo = itemAcervo;
 	}
-
-
-
-
 	public String getDataEmprestimo() {
 		return dataEmprestimo;
 	}
-
-
-
-
 	public void setDataEmprestimo(String dataEmprestimo) {
 		this.dataEmprestimo = dataEmprestimo;
 	}
-
-
-
-
 	public String getDataDevolucao() {
 		return dataDevolucao;
 	}
-
-
-
-
 	public void setDataDevolucao(String dataDevolucao) {
 		this.dataDevolucao = dataDevolucao;
 	}
-
-
-
-
 	public int getStatus() {
 		return status;
 	}
-
-
-
-
 	public void setStatus(int status) {
 		this.status = status;
 	}
-
-
-
-
 	@Override
 	public String toString() {
-		return "Emprestimo\n Aluno: " + aluno.getMatricula() + "-" + aluno.getNome()
-		+ ",\n Livro: " + livro.getISBN() +"-" + livro.getTitulo()
-		+ ",\n Data de Emprestimo: " + dataEmprestimo
-		+ ",\n Data de Devolução: " + dataDevolucao 
-		+ ",\n Status=" + status + "\n";
+		return "Emprestimo [aluno=" + aluno + ", itemAcervo=" + itemAcervo + ", dataEmprestimo=" + dataEmprestimo
+				+ ", dataDevolucao=" + dataDevolucao + ", status=" + status + "]";
 	}
 	
 }
