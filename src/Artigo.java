@@ -3,7 +3,7 @@ public class Artigo extends ItemAcervo {
 	private String titulo;
 	private String autor;
 	private String ano;
-	private String periodo;
+	private String periodico;
 	public String getTitulo() {
 		return titulo;
 	}
@@ -22,15 +22,17 @@ public class Artigo extends ItemAcervo {
 	public void setAno(String ano) {
 		this.ano = ano;
 	}
-	public String getPeriodo() {
-		return periodo;
+	public String getPeriodico() {
+		return periodico;
 	}
-	public void setPeriodo(String periodo) {
-		this.periodo = periodo;
+	public void setPeriodico(String periodico) {
+		this.periodico = periodico;
 	}
 	@Override
 	public String toString() {
-		return "Artigo [titulo=" + titulo + ", autor=" + autor + ", ano=" + ano + ", periodo=" + periodo + "]";
+		return "Artigo [titulo=" + titulo + ", autor=" + autor + ", ano=" + ano + ", periodico=" + periodico + "]";
 	}
+
+	
 
 }

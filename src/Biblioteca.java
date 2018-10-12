@@ -11,6 +11,7 @@ public class Biblioteca {
 		Scanner n = new Scanner(System.in);
 		
 		Aluno a = new Aluno();
+		System.out.println("--Informe dados para o Aluno --");
 		System.out.print("\rInfome a matrícula do aluno: ");
 		a.setMatricula(e.next());
 
@@ -26,7 +27,7 @@ public class Biblioteca {
 		Scanner n = new Scanner(System.in);
 		
 		Livro l = new Livro();
-		System.out.println("Informe dados para o Livro -->");
+		System.out.println("--Informe dados para o Livro --");
 		
 		System.out.print("\rTítulo: ");
 		l.setTitulo(n.nextLine());
@@ -56,7 +57,7 @@ public class Biblioteca {
 		Scanner titulo = new Scanner(System.in);
 		Scanner editora = new Scanner(System.in);
 		
-
+		System.out.println("--Informe dados para a Revista --");
 		System.out.println("\rDigite um numero: ");
 		revista.setNumero(numero.next());
 		
@@ -76,6 +77,7 @@ public class Biblioteca {
 		revista.setEditora(editora.nextLine());
 		
 		itensAcervo.add(revista);
+		System.out.println("Revista Cadastrada!");
 			
 	}
 	
@@ -86,6 +88,7 @@ public class Biblioteca {
 		Scanner artista = new Scanner(System.in);
 		Scanner categoria = new Scanner(System.in);
 		
+		System.out.println("--Informe dados para o CD --");
 		System.out.println("\rDigite um Título: ");
 		cd.setTitulo(titulo.nextLine());
 		
@@ -96,6 +99,7 @@ public class Biblioteca {
 		cd.setCategoria(categoria.nextLine());
 		
 		itensAcervo.add(cd);
+		System.out.println("CD Cadastrado!");
 	}
 	
 	public void cadastrarDvd(){
@@ -106,6 +110,7 @@ public class Biblioteca {
 		Scanner atores = new Scanner(System.in);
 		Scanner diretor = new Scanner(System.in);
 		
+		System.out.println("--Informe dados para o DVD --");
 		System.out.println("\rDigite um Título: ");
 		dvd.setTitulo(titulo.nextLine());
 		
@@ -119,6 +124,7 @@ public class Biblioteca {
 		dvd.setDiretor(diretor.nextLine());
 		
 		itensAcervo.add(dvd);
+		System.out.println("DVD Cadastrado!");
 	}
 	
 	public void cadastrarArtigo(){
@@ -127,8 +133,9 @@ public class Biblioteca {
 		Scanner titulo = new Scanner(System.in);
 		Scanner autor = new Scanner(System.in);
 		Scanner ano = new Scanner(System.in);
-		Scanner periodo = new Scanner(System.in);
+		Scanner periodico = new Scanner(System.in);
 		
+		System.out.println("Informe dados para o Artigo -->\n");
 		System.out.println("\rDigite um Título: ");
 		artigo.setTitulo(titulo.nextLine());
 		
@@ -138,10 +145,11 @@ public class Biblioteca {
 		System.out.println("\rDigite um Ano: ");
 		artigo.setAno(ano.next());
 		
-		System.out.println("\rDigite o Período: ");
-		artigo.setPeriodo(periodo.next());
+		System.out.println("\rDigite o Periódico: ");
+		artigo.setPeriodico(periodico.next());
 		
 		itensAcervo.add(artigo);
+		System.out.println("Artigo Cadastrado!");
 	}
 		
 	
@@ -159,14 +167,15 @@ public class Biblioteca {
 	
 	public void emprestarItens() {
 		System.out.println("\n");
+		System.out.println("** Lista do Acervo **\n\n");
 		listarAlunos();
 		System.out.println("\n");
 		listarItensAcervo();
+		System.out.println("\n\n");
 		
-		
-		System.out.println("*************************************");
+		System.out.println("------------------------------------");
 		System.out.println("**Empréstimo de Acervo para Alunos**");
-		System.out.println("Informe o id do aluno e do Acervo para realizar o emprestimo.\n");
+		System.out.println("\nInforme o id do aluno e do Acervo para realizar o emprestimo.\n");
 		
 		Emprestimo emp = new Emprestimo();
 		Scanner e = new Scanner(System.in);
@@ -181,7 +190,7 @@ public class Biblioteca {
 		System.out.print("\rInforme Data de Emprestimo: ");
 		emp.setDataEmprestimo(n.next());
 		
-		emp.setStatus(1);
+		emp.setStatus(Emprestimo.Emprestado);
 		
 		emprestimos.add(emp);
 		System.out.println("\nEmprestimo Realizado!!\n");
@@ -191,7 +200,7 @@ public class Biblioteca {
 	public void listarEmprestimos() {
 		System.out.println("**Empréstimos Realizados**");
 		for(int i=0;i<emprestimos.size();i++)
-			System.out.println((i+1) + ". " + emprestimos.get(i));
+			System.out.println((i+1) + "." + emprestimos.get(i));
 	}
 	
 	public void devolverAcervo() {
@@ -208,6 +217,8 @@ public class Biblioteca {
 		System.out.print("Informe a data de Devolução: ");
 		Scanner n = new Scanner(System.in);
 		emp.setDataDevolucao(n.next());
+		
+		emp.setStatus(Emprestimo.Devolvido);
 		
 		System.out.println("\nDevolução realizada! Agradecemos a Preferência\n");
 	
