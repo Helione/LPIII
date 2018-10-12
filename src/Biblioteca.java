@@ -203,11 +203,19 @@ public class Biblioteca {
 			System.out.println((i+1) + "." + emprestimos.get(i));
 	}
 	
+	public void listarEmprestados(){
+		System.out.println("**Lista de Emprestados**");
+		for(int i=0;i<emprestimos.size();i++){
+			if(emprestimos.get(i).getStatus() == Emprestimo.Emprestado)
+			System.out.println((i+1) + "." + emprestimos.get(i));
+		}
+	}
+	
 	public void devolverAcervo() {
 		System.out.print("\n\n");
 		listarEmprestimos();
 		
-		System.out.println("************************");
+		System.out.println("------------------------");
 		System.out.println("**Devolução de Acervo**");
 		
 		System.out.print("Informe qual Acervo deseja devolver: ");
